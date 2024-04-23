@@ -1,5 +1,6 @@
 package it.marconi.springrubrica.services;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class ContactService {
         return c;
     }
 
-    public Contact get(UUID id) {
+    public Optional<Contact> get(UUID id) {
         return contactRepo.findById(id);
     }
 }
