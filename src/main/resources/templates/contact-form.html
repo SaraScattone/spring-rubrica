@@ -16,7 +16,7 @@
 
                 <!--controlli del validator-->
                 <div th:if="${#fields.hasErrors('name')}">
-                    <span th:error="*{name}" class="text-danger"></span>
+                    <span th:errors="*{name}" class="text-danger"></span>
                 </div>
 
             </div>
@@ -26,7 +26,7 @@
 
                 <!--controlli del validator-->
                 <div th:if="${#fields.hasErrors('surname')}">
-                    <span th:error="*{surname}" class="text-danger"></span>
+                    <span th:errors="*{surname}" class="text-danger"></span>
                 </div>
 
             </div>
@@ -36,7 +36,7 @@
 
                 <!--controlli del validator-->
                 <div th:if="${#fields.hasErrors('phone')}">
-                    <span th:error="*{phone}" class="text-danger"></span>
+                    <span th:errors="*{phone}" class="text-danger"></span>
                 </div>
 
             </div>
@@ -46,14 +46,15 @@
 
                 <!--controlli del validator-->
                 <div th:if="${#fields.hasErrors('email')}">
-                    <span th:error="*{email}" class="text-danger"></span>
+                    <span th:errors="*{email}" class="text-danger"></span>
                 </div>
 
             </div>
 
             <div>
-                <input type="submit" value="Invia"/>
-                <input type="reset" value="Cancella tutto"/>
+                <input class="btn btn-success" type="submit" value="Conferma"/>
+                <input class="btn btn-secondary" type="reset" value="Cancella"/>
+                <a th:href="@{/contacts}" class="btn btn-primary">Home</a>
             </div>
         </form>
     </div>
